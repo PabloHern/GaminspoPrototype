@@ -1,0 +1,20 @@
+.logo_img {
+  width: 100%;
+
+}
+
+.logo_div {
+  width: 60%;
+  margin: 1em auto;
+}
+
+.footer_div {
+  padding: 1em 0;
+  width: 100%;
+  display: flex;
+
+}
+
+.no_log {
+  text-align: center;
+}

@@ -1,11 +1,12 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-export default function Login(props) {
+export default function ContactForm() {
   const navigate = useNavigate();
+  const { TextArea } = Input;
   const onFinish = (values) => {
     console.log('Success:', values);
-    navigate("/mainPage")
+    navigate(-1)
   };
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -13,9 +14,9 @@ export default function Login(props) {
   return (
     <Form
       name="basic"
-      // labelCol={{
-      //   span: 8,
-      // }}
+      labelCol={{
+        span: 8,
+      }}
       wrapperCol={{
         span: 16,
       }}
@@ -27,12 +28,12 @@ export default function Login(props) {
       autoComplete="off"
     >
       <Form.Item
-        label="Username"
-        name="username"
+        label="Name"
+        name="name"
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Please input your name!',
           },
         ]}
       >
@@ -40,27 +41,28 @@ export default function Login(props) {
       </Form.Item>
 
       <Form.Item
-        label="Password"
-        name="password"
+        label="Email"
+        name="email"
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: 'Please input your email!',
           },
         ]}
       >
-        <Input.Password />
+        <Input />
       </Form.Item>
-
       <Form.Item
-        name="remember"
-        valuePropName="checked"
-        wrapperCol={{
-          offset: 8,
-          span: 16,
-        }}
+        label="Message"
+        name="message"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your message!',
+          },
+        ]}
       >
-        <Checkbox>Remember me</Checkbox>
+        <TextArea rows={4} />
       </Form.Item>
 
       <Form.Item
@@ -70,7 +72,7 @@ export default function Login(props) {
         }}
       >
         <Button type="primary" htmlType="submit">
-          {props.name}
+          Send
         </Button>
       </Form.Item>
     </Form>

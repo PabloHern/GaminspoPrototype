@@ -1,0 +1,26 @@
+.first_row {
+  margin: 1em auto;
+  width: 95%;
+}
+
+.first_row_item {
+  padding: 1em auto;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+
+  padding: 1em;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  justify-content: center;
+}
+
+.card_div {
+  padding: 20px;
+}

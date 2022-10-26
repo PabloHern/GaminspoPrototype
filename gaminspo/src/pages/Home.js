@@ -4,40 +4,44 @@ import { Col, Divider, Row } from 'antd';
 import Login from '../components/Login';
 import { Avatar } from 'antd';
 import { Typography } from 'antd';
-import './Home.css';
+import '../styles/Home.css';
 import { Card, Space } from 'antd';
-const { Text } = Typography;
+import { useNavigate } from "react-router-dom";
+import Footer from '../components/Footer';
+const { Title } = Typography;
+const { Link } = Typography;
 export default function Home() {
+  const navigate = useNavigate();
   return (
 
     <Space direction="vertical" size="large" style={{ display: 'flex' }}>
-      <Divider>
+      <div className="logo_div">
         <Row justify='center'>
           <Col span={12}>
-            <Avatar
-              size={{ xs: 80, sm: 80, md: 80, lg: 80, xl: 80, xxl: 100 }}
-              src="img/capylogo.png"
-            />
-          </Col>
-          <Col span={12}>
-            <h1>Gaminspo</h1>
-            <Text type="secondary">Your inspirational gaming gallery</Text>
+            <img className="logo_img" src="img/png_logo.png" ></img>
           </Col>
         </Row>
-      </Divider>
-      <div></div>
-      <div></div>
+      </div>
       <Row justify="space-around">
         <Col span={8} >
-          <Login>
+          <Divider>
+            <Title level={2}>Log in!</Title>
+          </Divider>
+          <Login name="Log in">
           </Login>
         </Col>
         <Col span={8} >
-          <Login>
+          <Divider>
+            <Title level={2}>Don't have an account? Sign in!</Title>
+          </Divider>
+          <Login name="Sign in">
           </Login>
         </Col>
       </Row>
-
+      <div className="no_log">
+        <Link onClick={() => navigate("/mainPage")}>Continue without logging in</Link>
+      </div>
+      <Footer></Footer>
     </Space>
 
   );
