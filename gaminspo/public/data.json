@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "epic capybara",
+    "info": "this is a capybara",
+    "img": "img/capylogo.png"
+  },
+  {
+    "id": 2,
+    "name": "koala",
+    "info": "this is  NOT a capybara",
+    "img": "img/koala.jpg"
+  }
+]
