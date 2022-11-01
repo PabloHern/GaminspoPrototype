@@ -2,19 +2,22 @@ import { PageHeader } from 'antd';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { Button } from 'antd';
-export default function Header() {
+export default function Header(props) {
   const navigate = useNavigate();
   return (
     <PageHeader
       className="site-page-header"
-      onBack={() => navigate(-1)}
+      onBack={() => navigate("/home")}
       title="Gaminspo"
       subTitle="Your inspirational gaming galleries"
-      extra={[
+      extra={props.name == "log" ?
         <Button type="primary" onClick={() => navigate("/Home")}>
           Log out
-        </Button>,
-      ]} />
+        </Button>
+        : <Button type="primary" onClick={() => navigate("/Home")}>
+          Create account!
+        </Button>
+      } />
 
   );
 }

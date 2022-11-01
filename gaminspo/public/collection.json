@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "monsters",
+    "images": [
+      {
+        "img": "img/mons1.jpg"
+      },
+      {
+        "img": "img/mons2.png"
+      },
+      {
+        "img": "img/mons3.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "animals",
+    "images": [
+      {
+        "img": "img/capylogo.png"
+      },
+      {
+        "img": "img/koala.jpg"
+      }
+    ]
+  }
+]

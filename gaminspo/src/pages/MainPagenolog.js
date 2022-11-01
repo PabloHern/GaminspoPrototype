@@ -14,7 +14,7 @@ import {
 import React, { useState, useEffect } from 'react';
 const { Title } = Typography;
 const { Link } = Typography;
-export default function MainPage() {
+export default function MainPagenolog() {
   const { Search } = Input;
   const { Meta } = Card;
   const onSearch = (value) => setValue(value);
@@ -43,14 +43,13 @@ export default function MainPage() {
   }, [])
   return (
     <Space direction="vertical" size="large" style={{ display: 'flex' }}>
-      <Header name="log" ></Header>
+      <Header name="nolog"></Header>
       <div className='first_row'>
-        <Button type="primary">Add your image</Button>
         <Search placeholder="input search text" onSearch={onSearch} style={{ width: 200 }} ></Search>
       </div>
       <span></span>
       <div className='content'>
-        <Menu name="log" page="1"></Menu>
+        <Menu name="nolog" page="1"></Menu>
         <div className='gallery'>
           <Row justify="space-around">
             {(data && data.length > 0 && (value == "" || value == null)) ? data.map(e => (
@@ -61,7 +60,6 @@ export default function MainPage() {
                     style={{ width: 240 }}
                     cover={<img alt="example" src={e.img} />}>
                     <Meta title={e.name} description={e.info} />
-                    <Divider><Button icon={<PlusSquareOutlined style={{ fontSize: '26px' }} />} style={{ color: '#08c' }} /></Divider>
 
                   </Card>
                 </div>
@@ -74,7 +72,6 @@ export default function MainPage() {
                     style={{ width: 240 }}
                     cover={<img alt="example" src={e.img} />}>
                     <Meta title={e.name} description={e.info} />
-                    <Divider><Button icon={<PlusSquareOutlined style={{ fontSize: '26px' }} />} style={{ color: '#08c' }} /></Divider>
                   </Card>
                 </div>
               </Col>

@@ -39,7 +39,7 @@ export default function Home() {
         </Col>
       </Row>
       <div className="no_log">
-        <Link onClick={() => navigate("/mainPage")}>Continue without logging in</Link>
+        <Link onClick={() => navigate("/mainPagenolog")}>Continue without logging in</Link>
       </div>
       <Footer></Footer>
     </Space>
